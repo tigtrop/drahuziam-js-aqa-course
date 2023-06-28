@@ -1,164 +1,73 @@
-function task1() {
-    console.log("Task 1 - Виведіть в консоль числа від 1 до n використовуючи цикл for.")
+function logNumbersFrom1toNum(num) {
+    console.log("Task 1 - Виведіть в консоль числа від 1 до n використовуючи цикл for.");
 
-    const n = 10
-
-    for(let i=1; i<n+1; i++) {
-        console.log(i) 
+    for(let i=1; i<num+1; i++) {
+        console.log(i) ;
      }
 }
 
-function task2() {
-    console.log("Task 2 - Напишіть цикл, який обчислює суму чисел від 1 до n. ")
+function logSumFrom1toNum(n) {
+    console.log("Task 2 - Напишіть цикл, який обчислює суму чисел від 1 до n. ");
 
-    const n = 100
-
-    let sum=0
-    let i=1
+    let sum=0;
+    let i=1;
     while(i<101){
-        sum=sum+i
-        i++
+        sum=sum+i;
+        i++;
     }
-    return sum
+    console.log(sum);
 }
 
-function task3() {
-    console.log("Task 3 - Використовуючи цикл while, виведіть в консоль числа від n до 1. ")
-
-    let n = 10
+function logNumbersFromNumTo1(n) {
+    console.log("Task 3 - Використовуючи цикл while, виведіть в консоль числа від n до 1. ");
 
     while(n>0) {
-        console.log(n)
-        n-=1
+        console.log(n);
+        n-=1;
     }
 }
 
-function task4() {
-    console.log("Task 4 - Напишіть цикл, який виводить всі парні числа від 1 до n.")
+function logPairedNumbersFrom1toNum(n) {
+    console.log("Task 4 - Напишіть цикл, який виводить всі парні числа від 1 до n.");
 
-    let n = 50
-    let i = 1
+    let i = 1;
 
     while(i<=50) {
         if(i%2==0){
-            console.log(i)
+            console.log(i);
         }
 
-        i++
+        i++;
     }
 }
 
-function task5() {
-    console.log("Task 5 - Виведіть в консоль таблицю множення від 1 до n використовуючи вкладені цикли.")
+function logMultiplicationTable(n) {
+    console.log("Task 5 - Виведіть в консоль таблицю множення від 1 до n використовуючи вкладені цикли.");
 
-    let n = 10
-    let i = 1
-    let one = 1
-    while(i<=n) {
-        console.log(one+"x"+i+"="+one*i)
-        i++
-
-        if(i>n){
-            i=1
-            one+=1
-            while(i<=n){
-                console.log(one+"x"+i+"="+one*i)
-                i++
-
-                if(i>n){
-                    i=1
-                    one+=1
-                    while(i<=n){
-                        console.log(one+"x"+i+"="+one*i)
-                        i++
-
-                        if(i>n){
-                            i=1
-                            one+=1
-                            while(i<=n){
-                                console.log(one+"x"+i+"="+one*i)
-                                i++
-
-                                if(i>n){
-                                    i=1
-                                    one+=1
-                                    while(i<=n){
-                                        console.log(one+"x"+i+"="+one*i)
-                                        i++
-
-                                        if(i>n){
-                                            i=1
-                                            one+=1
-                                            while(i<=n){
-                                                console.log(one+"x"+i+"="+one*i)
-                                                i++
-
-                                                if(i>n){
-                                                    i=1
-                                                    one+=1
-                                                    while(i<=n){
-                                                        console.log(one+"x"+i+"="+one*i)
-                                                        i++
-
-                                                        if(i>n){
-                                                            i=1
-                                                            one+=1
-                                                            while(i<=n){
-                                                                console.log(one+"x"+i+"="+one*i)
-                                                                i++
-
-                                                                if(i>n){
-                                                                    i=1
-                                                                    one+=1
-                                                                    while(i<=n){
-                                                                        console.log(one+"x"+i+"="+one*i)
-                                                                        i++
-
-                                                                        if(i>n){
-                                                                            i=1
-                                                                            one+=1
-                                                                            while(i<=n){
-                                                                                console.log(one+"x"+i+"="+one*i)
-                                                                                i++
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            
-                        }
-                    }
-                }
-            }
+    for(let one = 1; one <= n ; one++){
+        for(let two = 1 ; two <= n ; two++) {
+            let sum = one*two;
+            console.log(`${one} x ${two} = ${sum}`);
         }
     }
 }
 
-function task6(n) {
+function logNumFactorial(n) {
     console.log("Task 6 - Обчисліть факторіал числа n, використовуючи цикл.")
 
-    let fact = 1
+    let fact = 1;
 
     for(let i = 1; i<=n;i++) {
-        fact = fact*i
+        fact = fact*i;
     }
-    return fact
+    console.log(fact);
 }
 
-function task7(n) {
-    console.log("Task 7 - Виведіть перші n чисел послідовності Фібоначчі.")
+function logNumFiboNumbers(n) {
+    console.log("Task 7 - Виведіть перші n чисел послідовності Фібоначчі.");
 
-let n1 = 0, n2 = 1
-let next = 0
+let n1 = 0, n2 = 1;
+let next = 0;
 
 for (let i = 1; i <= n; i++) {
     console.log(n1);
@@ -168,8 +77,8 @@ for (let i = 1; i <= n; i++) {
 }
 }
 
-function task8(n) {
-    console.log("Task 8 - Виведіть всі прості числа від 1 до n.")
+function logSimpleNumbersFrom1toNum(n) {
+    console.log("Task 8 - Виведіть всі прості числа від 1 до n.");
 
     function isPrimeNumber(n) {
         if (n < 2) {
@@ -191,45 +100,44 @@ function task8(n) {
     
 }
 
-function task9(n) {
-    console.log("Task 9 - Створіть масив чисел від 1 до n, а потім виведіть тільки ті числа, що діляться на 5 без остачі. (Дано: n = 100)")
+function logNumbersThatDevideTo5(n) {
+    console.log("Task 9 - Створіть масив чисел від 1 до n, а потім виведіть тільки ті числа, що діляться на 5 без остачі. (Дано: n = 100)");
 
-    let numbers = []
+    let numbers = [];
 
-    let i=1
+    let i=1;
     while(i<=n){
-        numbers.push(i)
-        i++
+        numbers.push(i);
+        i++;
     }
 
-    let i2=1
+    let i2=1;
 
     while(i2<=n){
         if(numbers[i2]%5==0) {
-            console.log(numbers[i2])
+            console.log(numbers[i2]);
         }
-        i2++
+        i2++;
     }
 }
 
-function task10() {
-    console.log("Task 9 - Дано масив чисел. Обчисліть суму чисел в цьому масиві. (Дано: масив = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])")
+function logSumFromArray(array1) {
+    console.log("Task 10 - Дано масив чисел. Обчисліть суму чисел в цьому масиві. (Дано: масив = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])");
 
-    let array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    let sum = 0
+    let sum = 0;
     for (let i = 0; i<array1.length; i++) {
-        sum = sum + array1[i]
+        sum = sum + array1[i];
     }
-    console.log(sum)
+    console.log(sum);
 }
 
-//task1()
-//console.log(task2())
-//task3()
-//task4()
-//task5()
-//console.log(task6(7))
-//task7(10)
-//task8(100)
-//task9(100)
-//task10()
+logNumbersFrom1toNum(10);
+logSumFrom1toNum(100);
+logNumbersFromNumTo1(10);
+logPairedNumbersFrom1toNum(50);
+logMultiplicationTable(10);
+logNumFactorial(7);
+logNumFiboNumbers(10);
+logSimpleNumbersFrom1toNum(100);
+logNumbersThatDevideTo5(100);
+logSumFromArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
